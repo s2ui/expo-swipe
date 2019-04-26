@@ -1,22 +1,23 @@
 import * as React from 'react';
 import './App.css';
+import {Container, Row} from "reactstrap";
 
-import logo from './logo.svg';
+const styles = {
+  navBar: {
+    backgroundColor: 'black',
+    width: '100%',
+    height: '100px',
+  }
+};
 
-class App extends React.Component {
-  public render() {
+const App = () =>  {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Container>
+          <Row style={styles.navBar}/>
+        </Container>
       </div>
     );
-  }
-}
+};
 
 export default App;
