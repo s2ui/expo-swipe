@@ -5,6 +5,8 @@ import {Container, Row} from "reactstrap";
 import {BorderBottomStyleProperty} from "csstype";
 import {runBoilerplate} from "./contentful/api";
 import {ContentfulType} from "contentful";
+import VendorCard from "./fc/VendorCard";
+import {mapContentfulExhibitor} from "./types/expo-swipe-types";
 
 const styles = {
   navBar: {
@@ -23,6 +25,7 @@ const initialState = {
   exhibitors: []
 };
 
+
 class App extends Component {
   state = initialState;
 
@@ -40,7 +43,9 @@ class App extends Component {
           <Row style={styles.navBar}/>
           {exhibitors && exhibitors.length > 0 ?
             exhibitors.map((exhibitor: ContentfulType) => {
-              return (<p key={exhibitor.sys.id}>{exhibitor.fields.name}</p>)
+              return (
+                <VendorCard exhibitor={mapContentfulExhibitor(exhibitor)} />
+              )
             })
             : null}
         </Container>
