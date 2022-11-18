@@ -6,7 +6,7 @@
     "contentful": "^7.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts-ts": "3.1.0",
+    "react-scripts-ts": "4.0.8",
     "reactstrap": "^8.0.0",
     "chalk": "^1.1.3",
     "cli-table2": "^0.2.0"
